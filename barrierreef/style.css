@@ -651,15 +651,15 @@ a:active {
 	padding: 0;
 	font-family: 'FontAwesome';
 	background-color: #000;
-	border: 1px solid #fff;
+	border: 2px solid #fff;
 	content: "";
 	color: #fff;
 	text-transform: lowercase; /* Stop screen readers from reading the text as capital letters */
 }
 
 .dropdown-toggle:after {
-	content: "\f078";
-	font-size: 14px;
+	content: "\f063";
+	font-size: 16px;
 	line-height: 27px;
 	position: relative;
 	top: 0;
@@ -674,7 +674,9 @@ a:active {
 }
 
 .dropdown-toggle.toggle-on:after {
-	content: "\f077";
+	content: "\f062 ";
+	font-size: 16px;
+
 }
 
 /* Small menu. */
@@ -1071,7 +1073,7 @@ a:active {
 # Header
 --------------------------------------------------------------*/
 .site-header {
-	background-color: #000;
+	background-color: #4965D6;
 	background-size: cover;
 }
 
@@ -1088,20 +1090,20 @@ a:active {
 .site-logo a {
 	position: absolute;
 	z-index: 10;
-	top: 1em;
+	top: 2em;
 	left: 1em;
 	display: block;
 	width: 2em;
 	height: 2em;
 	background: black;
-	border: 2px solid white;
-	color: white;
+	border: 2px solid lightskyblue;
+	color: lightskyblue;
 	text-decoration: none;
 }
 
 .site-logo a:hover,
 .site-logo a:focus {
-	outline: 2px solid white;
+	outline: 2px solid black;
 }
 
 .site-firstletter {
@@ -1110,6 +1112,7 @@ a:active {
 	font-weight: 700;
 	text-align: center;
 	line-height: 1.3em;
+	text-transform: uppercase;
 }
 
 .site-logo a:hover .site-firstletter,
@@ -1154,7 +1157,7 @@ a:active {
 	content: "";
 	margin: .7em auto 0;
 	width: 3em;
-	border-bottom: solid 1px #fff;
+	/*border-bottom: solid 1px #fff;*/
 	opacity: .5;
 }
 

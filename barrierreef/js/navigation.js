@@ -1,11 +1,11 @@
 /**
- * File navigation.js.
+ * navigation.js
  *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
+ * Handles toggling the navigation menu for small screens and enables tab
+ * support for dropdown menus.
  */
-( function() {
-	var container, button, menu, links, subMenus, i, len;
+( function( $ ) {
+	var container, button, menu, links, subMenus;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -47,7 +47,7 @@
 	subMenus = menu.getElementsByTagName( 'ul' );
 
 	// Set menu items with submenus to aria-haspopup="true".
-	for ( i = 0, len = subMenus.length; i < len; i++ ) {
+	for ( var i = 0, len = subMenus.length; i < len; i++ ) {
 		subMenus[i].parentNode.setAttribute( 'aria-haspopup', 'true' );
 	}
 
@@ -78,9 +78,10 @@
 			self = self.parentElement;
 		}
 	}
+
 	function initMainNavigation( container ) {
 		// Add dropdown toggle that display child menu items.
-		container.find( '.menu-item-has-children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
+		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
 
 		// Toggle buttons and submenu items with active children menu items.
 		container.find( '.current-menu-ancestor > button' ).addClass( 'toggle-on' );
@@ -109,4 +110,31 @@
 			});
 		}
 	});
-} )();
+
+	// Hide/show toggle button on scroll
+
+	var position, direction, previous;
+
+	$(window).scroll(function(){
+		if( $(this).scrollTop() >= position ){
+			direction = 'down';
+			if(direction !== previous){
+				$('.menu-toggle').addClass('hide');
+
+				previous = direction;
+			}
+		} else {
+			direction = 'up';
+			if(direction !== previous){
+				$('.menu-toggle').removeClass('hide');
+
+				previous = direction;
+			}
+		}
+		position = $(this).scrollTop();
+	});
+
+	// Wrap centered images in a new figure element
+	$( 'img.aligncenter' ).wrap( '<figure class="centered-image"></figure>');
+
+} )( jQuery );

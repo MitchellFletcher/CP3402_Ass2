@@ -116,7 +116,15 @@ add_action( 'widgets_init', 'barrierreef_widgets_init' );
 function barrierreef_scripts() {
 	wp_enqueue_style( 'barrierreef-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'barrierreef-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	// Add Google Fonts: Fira Sans and Merriweather
+	wp_enqueue_style( 'barrierreef-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css' );
+
+	// Add Font Awesome icons (http://fontawesome.io)
+	wp_enqueue_style( 'barrierreef-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
+
+
+
+	wp_enqueue_script( 'barrierreef-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20151215', true );
 
 	wp_localize_script( 'barrierreef-navigation', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'barrierreef' ) . '</span>',
