@@ -8,7 +8,6 @@
  *
  * @package BarrierReef
  */
-
 ?>
 
 	</div><!-- #content -->
@@ -17,10 +16,13 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'barrierreef' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'barrierreef' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
+			
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'barrierreef' ), 'barrierreef', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+
+
 
 <?php wp_footer(); ?>
 

@@ -23,7 +23,7 @@
 function barrierreef_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'barrierreef_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
+		'default-text-color'     => 'ffffff',
 		'width'                  => 1600,
 		'height'                 => 300,
 		'flex-height'            => true,

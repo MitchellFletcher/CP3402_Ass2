@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site <?php echo get_theme_mod( 'layout_setting', 'no-sidebar' ); ?>">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'popperscores' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'barrierreef' ); ?></a>
 
 	<?php if ( get_header_image() ) { ?>
 	<header id="masthead" class="site-header" style="background-image: url(<?php header_image(); ?>)" role="banner">
@@ -63,7 +63,7 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'popperscores' ); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'barrierreef' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
