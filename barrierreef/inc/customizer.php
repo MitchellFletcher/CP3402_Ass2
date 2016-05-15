@@ -23,7 +23,7 @@ function barrierreef_customize_register( $wp_customize ) {
 
 	// Create header background color setting
 	$wp_customize->add_setting( 'header_color', array(
-		'default' => '#000000',
+		'default' => '#21759b',
 		'type' => 'theme_mod',
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport' => 'postMessage',
@@ -49,7 +49,7 @@ function barrierreef_customize_register( $wp_customize ) {
 		'default' => '#21759b',
 		'type' => 'theme_mod',
 		'sanitize_callback' => 'sanitize_hex_color',
-		'transport' => 'postMessage',
+		
 	));
 
 	$wp_customize-> add_control
@@ -119,11 +119,15 @@ function barrierreef_sanitize_layout( $value ) {
  */
 function barrierreef_customizer_css() {
 	$header_color = get_theme_mod('header_color');
+	$footer_color = get_theme_mod('footer_color');
 
 	?>
 	<style type="text/css">
 		.site-header {
 			background-color: <?php echo $header_color; ?>
+		}
+		.site-footer{
+			background-color: <?php echo $footer_color; ?>
 		}
 
 	</style>

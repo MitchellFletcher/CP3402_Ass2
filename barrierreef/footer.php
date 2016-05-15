@@ -17,7 +17,7 @@
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'barrierreef' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'barrierreef' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'barrierreef' ), 'BarrierReef', '<a href="http://underscores.me/" rel="designer">Tay, Mitch, Dean</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'barrierreef' ), 'barrierreef', '<a href="http://underscores.me/" rel="designer">Tay, Mitch, Dean</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
