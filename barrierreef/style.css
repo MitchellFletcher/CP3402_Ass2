@@ -760,7 +760,7 @@ a:active {
 	.main-navigation.toggled {
 		position: relative;
 		min-height: 3.5em;
-		max-width: 58em;
+		max-width: 35em;
 		margin: 0 auto;
 		padding: 0 3.5em;
 		background-color: #000;
@@ -1079,7 +1079,7 @@ a:active {
 
 @media screen and (min-width: 50em) {
 	.site-header {
-		min-height: 4em;
+		min-height: 9em;
 	}
 }
 
