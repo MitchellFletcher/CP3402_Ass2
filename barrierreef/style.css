@@ -284,12 +284,11 @@ textarea {
 	font-size: 1rem;
 	line-height: 1.5;
 }
-
 .site-content {
 	font-size: 1.125em;
 	line-height: 1.6em;
-}
 
+}
 h1,
 h2,
 h3,
@@ -1192,7 +1191,7 @@ a:active {
 
 	.widget {
 		float: left;
-		width: 300px;
+		width: 250px;
 		margin: 0 .9em 1.8em;
 	}
 }
