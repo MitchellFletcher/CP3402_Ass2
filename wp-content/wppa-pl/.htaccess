@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /C:/xampp/apps/wordpress/htdocs/wp-content/wppa-pl
+RewriteRule ^Special-Guests/(.*) /C:/xampp/apps/wordpress/htdocs/wp-content/uploads/wppa-source/album-1/$1 [NC]
+</IfModule>
